@@ -13,4 +13,7 @@ I have not implemented any logging (for which I would have set up log4net) for e
 I have used knockout.js instead of VUE or Razor as I am use to it and my Razor is a bit rusty and I don't know VUE.
 It contains some CSS but not much (just enough to show I know what I am doing).
 
+You can also find this project on GitHub at:
+https://github.com/renzoburo/iOrder
+
 !!!Thank you for your consideration!!!
