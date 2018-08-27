@@ -7,7 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iOrder.web", "iOrder.web\iO
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "iOrder.db", "iOrder.db\iOrder.db.sqlproj", "{EFA80611-EC52-4232-9EEA-02201B90FBB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iOrder.dataaccess", "iOrder.dataaccess\iOrder.dataaccess.csproj", "{A6BF0C0F-E917-4B24-B50E-AB2609164C61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iOrder.dataaccess", "iOrder.dataaccess\iOrder.dataaccess.csproj", "{A6BF0C0F-E917-4B24-B50E-AB2609164C61}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{776A40BB-E4D5-4905-9E2C-AE8AD570C2AB}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.txt = Readme.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
