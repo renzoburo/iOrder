@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Products";
+}
+<div class="wrapper">
+    <div class="shopping-cart">
+        <table class="shopping-cart-table">
+            <tbody>
+                <tr>
+                    <td style="padding: 5px;"><strong>Total Items:</strong></td>
+                    <td class="items" data-bind="text: $root.totalItems"></td>
+                </tr>
+                <tr>
+                    <td style="padding: 5px"><strong>Total Price:</strong></td>
+                    <td class="price" data-bind="text:  $root.totalPrice"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="checout-button">
+                        <button data-bind="click: $root.checkout, enable: $root.checkoutEnabled">Checkout</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="products">
+        <table>
+            <tbody data-bind="foreach: products">
+                <tr class="product-row">
+                    <td class="product-image">
+                        <div>
+                            <img data-bind="attr:{src: image}" alt="Unavailable" />
+                        </div>
+                    </td>
+                    <td class="product-info">
+                        <div><strong data-bind="text: title"></strong></div>
+                        <div><strong data-bind="text: formattedPrice"></strong></div>
+                        <div class="product-info">
+                            <p data-bind="text: description"></p>
+                        </div>
+                        <button data-bind="click: $root.addProductToBasket">Add to Basket</button>
+                        <button data-bind="click: $root.removeProductFromBasket, visible: canDelete">Remove from Basket</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+<script src="/scripts/jquery.sticky.js"></script>
+<script src="/scripts/knockout-3.4.2.debug.js"></script>
+<script src="/scripts/Product.js"></script>

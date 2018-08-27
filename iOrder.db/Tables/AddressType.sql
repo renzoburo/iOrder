@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[AddressType]
+(
+    [Id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY DEFAULT newid(), 
+    [AddressTypeName] NVARCHAR(50) NOT NULL
+)

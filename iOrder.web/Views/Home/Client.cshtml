@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Clients";
+}
+<div class="row">
+    <table>
+        <thead>
+        <tr>
+            <td></td>
+            <th>First Names</th>
+            <th>Surname</th>
+            <th>Address Type</th>
+            <th>Street Address</th>
+            <th>Suburb</th>
+            <th>City</th>
+            <th>Postal Code</th>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </thead>
+        <tbody data-bind="foreach: clients">
+        <tr>
+            <td><span class="edit-indicator" data-bind="visible: $root.valueChanged">*</span></td>
+            <td><input placeholder="First Names" data-bind="value: firstNames,event:{change: $root.onValueChanged}"/></td>
+            <td><input placeholder="Surname" data-bind="value: surname"/></td>
+            <!--
+            <td><input placeholder="Address Type" data-bind="value: addressType" /></td>
+            -->
+            <td>
+                <select data-bind="options: $root.addressTypes, optionsText: 'addressTypeName', optionsValue: 'id', value: addressType"></select>
+            </td>
+            <td><input placeholder="Street Address" data-bind="value: streetAddress"/></td>
+            <td><input placeholder="Suburb" data-bind="value: suburb"/></td>
+            <td><input placeholder="City" data-bind="value: city"/></td>
+            <td><input placeholder="Postal Code" data-bind="value: postalCode"/></td>
+            <td><button data-bind="click: $root.saveClient, enable: $root.valueChanged">Save</button></td>
+            <td><button data-bind="click: $root.removeClient">Delete</button></td>
+            <td><button data-bind="click: $root.goOrder">Order</button></td>
+        </tr>
+        </tbody>
+    </table>
+    <button data-bind="click: addClient">Add Client</button>
+</div>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"></script>
+<script src="/scripts/knockout-3.4.2.debug.js"></script>
+<script src="scripts/Client.js"></script>
